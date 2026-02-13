@@ -1,0 +1,7 @@
+poeni1, poeni2 = map(int, input().split())
+dvojki1, trojki1 = map(int, input().split())
+dvojki2, trojki2 = map(int, input().split())
+sl1 = poeni1-(dvojki1*2)-(trojki1*3)
+sl2 = poeni2-(dvojki2*2)-(trojki2*3)
+print(f"{sl1} {sl2}")
+print(sl1+sl2)

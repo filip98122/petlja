@@ -1,0 +1,1 @@
+print(max(int(input())-500,300))

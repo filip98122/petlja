@@ -1,0 +1,9 @@
+a,b=map(int,input().split())
+l=[*(str(a))]
+s=set(l)
+l1=list(s)
+l1.sort()
+naj=int(l1[len(l1)-1])
+aa=str(a)
+aaa=aa.replace(f"{naj}",f"{b}")
+print(aaa)

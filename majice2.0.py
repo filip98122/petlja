@@ -1,0 +1,8 @@
+A=int(input())
+B=int(input())
+S=int(input())
+M=int(input())
+L=int(input())
+A=max(0,A-S)
+B=max(0,B-L)
+print(max(0,A+B-M))

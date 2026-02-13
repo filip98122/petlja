@@ -1,0 +1,11 @@
+a=int(input())
+bokal=6
+kanta=30
+bure=120
+print(a//bure)
+a-=(a//bure)*bure
+print(a//kanta)
+a-=(a//kanta)*kanta
+print(a//bokal)
+a-=(a//bokal)*bokal
+print(a)
