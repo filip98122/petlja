@@ -1,4 +1,6 @@
 import math
+def truncate(f, n):
+    return math.trunc(f * 10**n) / 10**n
 predmeta_iz_med_skole = int(input())
 neracunajuci_predmeti = int(input())
 l = []
@@ -7,8 +9,16 @@ for i in range(neracunajuci_predmeti):
     l.append(ocena_za_taj_predmet)
 prosek = float(input())
 proseknepodeljen=prosek*predmeta_iz_med_skole
+proseknepodeljen=round(proseknepodeljen)
 for i in range(neracunajuci_predmeti):
     proseknepodeljen-=l[i]
-prosek=proseknepodeljen/(predmeta_iz_med_skole-neracunajuci_predmeti)
-p=str(prosek)+"000"
-print(p[0]+p[1]+p[2]+p[3])
+prosek=str(proseknepodeljen/(predmeta_iz_med_skole-neracunajuci_predmeti))
+if len(prosek)==1:
+    prosek= prosek+".00"
+    print(prosek)
+    exit()
+if len(prosek)<=4:
+    prosek=prosek+"00"
+    print(prosek[0]+prosek[1]+prosek[2]+prosek[3])
+    exit()
+print(truncate(float(prosek),2))
