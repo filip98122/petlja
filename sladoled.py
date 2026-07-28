@@ -1,0 +1,1 @@
+print(60+int(input())*45+int(input())*25)
